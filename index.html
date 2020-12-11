@@ -15,24 +15,56 @@
   <body>
 
 
-<header class="container-fluid">
+<header class="container-fluid bg-dark">
   <div class="row">
-    <div class="col"></div>
+    <div class="col text-light">
+      <H1>Gold Clicker</H1>
+    </div>
   </div>
 </header>
 
 
-<main class="container-fluid">
-  <div class="row">
-    <div class="col"></div>
-    <div class="col"></div>
+<main class="container-fluid bg-secondary grow">
+
+  <div class="row min-100">
+    <div class="col-md-7 d-flex justify-content-center">
+      <div class="container-fluid">
+        <div class="row">
+
+          <div class="col-12 d-flex justify-content-center">
+            <h2>Gold: <span id="gold"></span></h2>
+          </div>
+
+          <div class="col-12 d-flex justify-content-center align-items-center ">
+           <button class="btn" onclick="addGold()"><img src="iconfinder_Gold_Ingot_185603.png" alt="GOLD"></button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-5 bg-dark text-light min-100">
+      <h2>Shop</h2>
+
+      <div class="d-flex direction-column align-items-center" >
+  <img src="miner.png" alt="Miner" class="shop-img">
+      <div>
+      <h3>Miner <span>3</span></h3>
+      <h5>+ 5 gold per second</h5>
+      <h5>Cost:</h5>
+      <button class="btn btn-success"> Purchase</button>
+      </div>
+    </div>
+  </div>
   </div>
 </main>
 
 
-<footer class="container-fluid">
+<footer class="container-fluid bg-dark">
   <div class="row">
-    <div class="col"></div>
+    <div class="col text-light text-center">
+      <h4>Made with <i class="fa fa-heart text-danger" aria-hidden="true"></i> by Chase Rogers</h4>
+    </div>
   </div>
 </footer>
 
