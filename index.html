@@ -1,89 +1,84 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <title>Checkpoint Clicker</title>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="style.css">
-  </head>
+<head>
+  <title>Checkpoint Clicker</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <body>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
 
 
-<header class="container-fluid bg-dark">
-  <div class="row">
-    <div class="col text-light">
-      <H1>Gold Clicker</H1>
+  <header class="container-fluid bg-dark">
+    <div class="row">
+      <div class="col text-light">
+        <H1>Gold Clicker</H1>
+      </div>
     </div>
-  </div>
-</header>
+  </header>
 
 
-<main class="container-fluid bg-secondary grow">
+  <main class="container-fluid bg-secondary grow">
 
-  <div class="row min-100">
-    <div class="col-md-7 d-flex justify-content-center">
-      <div class="container-fluid">
-        <div class="row">
+    <div class="row min-100">
+      <div class="col-md-7 d-flex justify-content-center">
+        <div class="container-fluid">
+          <div class="row">
 
-          <div class="col-12 d-flex justify-content-center">
-            <h2>Gold: <span id="gold"></span></h2>
+            <div class="col-12 d-flex justify-content-center">
+              <h2>Gold: <span id="gold"></span></h2>
+            </div>
+
+            <div class="col-12 d-flex justify-content-center align-items-center ">
+              <button class="btn" onclick="addGold()"><img src="iconfinder_Gold_Ingot_185603.png" alt="GOLD"></button>
+            </div>
+
           </div>
+        </div>
+      </div>
 
-          <div class="col-12 d-flex justify-content-center align-items-center ">
-           <button class="btn" onclick="addGold()"><img src="iconfinder_Gold_Ingot_185603.png" alt="GOLD"></button>
+      <div class="col-md-5 bg-dark text-light min-100">
+        <h2>Shop</h2>
+        <div class="container-fluid">
+          <div class="row" id="shop">
+
+
+
           </div>
-
         </div>
       </div>
     </div>
+  </main>
 
-    <div class="col-md-5 bg-dark text-light min-100">
-      <h2>Shop</h2>
 
-      <div class="d-flex direction-column align-items-center" >
-  <img src="miner.png" alt="Miner" class="shop-img">
-      <div>
-      <h3>Miner x<span>3</span></h3>
-      <h5>+ 5 gold per second</h5>
-      <h5>Cost:</h5>
-      <button class="btn btn-success" onclick="market('miner')"> Purchase</button>
+  <footer class="container-fluid bg-dark">
+    <div class="row">
+      <div class="col text-light text-center">
+        <h4>Made with <i class="fa fa-heart text-danger" aria-hidden="true"></i> by Chase Rogers</h4>
       </div>
     </div>
-
-    <div class="d-flex direction-column align-items-center" >
-      <img src="pickaxe.png" alt="Pick" class="shop-img">
-          <div>
-          <h3>Better Pickaxe x<span>3</span></h3>
-          <h5>2x gold per click</h5>
-          <h5>Cost:</h5>
-          <button class="btn btn-success" onclick="market('pick')"> Purchase</button>
-          </div>
-        </div>
-
-  </div>
-  </div>
-</main>
+  </footer>
 
 
-<footer class="container-fluid bg-dark">
-  <div class="row">
-    <div class="col text-light text-center">
-      <h4>Made with <i class="fa fa-heart text-danger" aria-hidden="true"></i> by Chase Rogers</h4>
-    </div>
-  </div>
-</footer>
+  <script src="main.js"></script>
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+</body>
 
-
-<script src="main.js"></script>
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-  </body>
 </html>
