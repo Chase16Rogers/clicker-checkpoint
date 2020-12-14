@@ -56,6 +56,7 @@ let shop = {
   }
 }
 loadSavedGold()
+if (gold < 1) { localSave() }
 loadSavedShop()
 
 function addGold() {
@@ -151,17 +152,17 @@ function localSave() {
 function loadSavedShop() {
   let savedShop = JSON.parse(localStorage.getItem("shopItems"))
   shop = savedShop
+  let savedAuto = JSON.parse(localStorage.getItem("saveAuto"))
+  let savedMultiplyer = JSON.parse(localStorage.getItem("saveMultiplyer"))
+  auto = savedAuto
+  multiplyer = savedMultiplyer
 }
 
 function loadSavedGold() {
   let savedGold = JSON.parse(localStorage.getItem("goldCount"))
-  let savedAuto = JSON.parse(localStorage.getItem("saveAuto"))
-  let savedMultiplyer = JSON.parse(localStorage.getItem("saveMultiplyer"))
   gold = savedGold
-  if (savedAuto == null) { savedAuto = 0 }
-  if (savedMultiplyer == null) { savedMultiplyer = 1 }
-  auto = savedAuto
-  multiplyer = savedMultiplyer
+  // if (savedAuto == null) { savedAuto = 0 }
+  // if (savedMultiplyer == null) { savedMultiplyer = 1 }
 }
 
 
