@@ -158,7 +158,8 @@ function loadSavedGold() {
   let savedAuto = JSON.parse(localStorage.getItem("saveAuto"))
   let savedMultiplyer = JSON.parse(localStorage.getItem("saveMultiplyer"))
   gold = savedGold
-
+  if (savedAuto == null) { savedAuto = 0 }
+  if (savedMultiplyer == null) { savedMultiplyer = 1 }
   auto = savedAuto
   multiplyer = savedMultiplyer
 }
