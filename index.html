@@ -17,36 +17,41 @@
 <body>
 
 
-  <header class="container-fluid bg-dark">
+  <header class="container-fluid bg-gold ">
     <div class="row">
-      <div class="col text-light">
+      <div class="col text-light text-dark">
         <H1>Gold Clicker</H1>
       </div>
     </div>
   </header>
 
 
-  <main class="container-fluid bg-secondary grow">
+  <main class="container-fluid bg-maroon grow">
 
     <div class="row min-100">
       <div class="col-md-7 d-flex justify-content-center">
         <div class="container-fluid">
           <div class="row">
 
-            <div class="col-12 d-flex justify-content-center">
-              <h2>Gold: <span id="gold"></span></h2>
+            <div class="col-12 d-flex justify-content-center text-gold big-text">
+              <p>Gold: <span id="gold"></span></p>
             </div>
 
             <div class="col-12 d-flex justify-content-center align-items-center ">
-              <button class="btn" onclick="addGold()"><img src="iconfinder_Gold_Ingot_185603.png" alt="GOLD"></button>
+              <img src="iconfinder_Gold_Ingot_185603.png" alt="GOLD" id="goldIngot" class="clickable"
+                onclick="addGold()">
             </div>
 
           </div>
         </div>
       </div>
 
-      <div class="col-md-5 bg-dark text-light min-100">
-        <h2>Shop</h2>
+      <div class="col-md-5 bg-gold text-dark text-light min-100">
+        <div>
+          <h2>Shop</h2>
+          <h2><span id="goldps">0</span> Gold Per Second</h2>
+          <h2><span id="goldpc">1</span> Gold Per Click</h2>
+        </div>
         <div class="container-fluid">
           <div class="row" id="shop">
 
@@ -59,10 +64,10 @@
   </main>
 
 
-  <footer class="container-fluid bg-dark">
+  <footer class="container-fluid bg-gold">
     <div class="row">
-      <div class="col text-light text-center">
-        <h4>Made with <i class="fa fa-heart text-danger" aria-hidden="true"></i> by Chase Rogers</h4>
+      <div class="col text-light text-center text-dark">
+        <h4>Made with <i class="fa fa-heart text-maroon" aria-hidden="true"></i> by Chase Rogers</h4>
       </div>
     </div>
   </footer>

@@ -16,3 +16,31 @@ footer {
 .shop-img {
   max-height: 12em;
 }
+
+.rotate {
+  transform: rotate(2)
+}
+
+.bg-gold {
+  background-color: gold;
+}
+
+.bg-maroon{
+  background-color: maroon;
+}
+
+.text-gold {
+  color: gold;
+}
+.text-maroon{
+  color: maroon;
+}
+
+.big-text{
+  font-size: 10em;
+  font-weight: bolder;
+}
+
+.clickable:hover {
+  cursor: pointer;
+}
