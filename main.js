@@ -87,7 +87,7 @@ function drawShop() {
     <img src="${shop[goods].img}" alt="${shop[goods]}" class="shop-img">
     <div>
         <h3>${shop[goods].name} x<span id="${goodName + 'count'}">${shop[goods].count}</span></h3>
-        <h5 id="diff">+ ${shop[goods].add} gold per second</h5>
+        <h5 id="${goodButt + "pick"}">+ ${shop[goods].add} gold per second</h5>
         <h5 >Cost: <span id="${goodName + "cost"}">${shop[goods].cost}</span> gold</h5>
         <button id="${goodButtId}" class="btn bg-maroon text-gold d-none" onclick="market('${goodButt}')">Purchase</button>
         </div>
@@ -95,6 +95,7 @@ function drawShop() {
     if (gold >= shop[goods].cost) { }
   }
   document.getElementById("shop").innerHTML = template
+  document.getElementById("pickaxepick").innerText = "x 2 gold per click"
 
 }
 
