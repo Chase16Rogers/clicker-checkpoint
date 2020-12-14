@@ -55,18 +55,22 @@ let shop = {
     add: 100,
   }
 }
+loadSavedGold()
+loadSavedShop()
 
 function addGold() {
   setTimeout(() => {
     gold += 1 * multiplyer
     drawGold()
     displayPurchase()
+    localSave()
   }, 5)
 }
 
 function drawGold() {
   document.getElementById("gold").innerText = gold
   displayPurchase()
+  localSave()
 }
 let shopKey = Object.keys(shop)
 
@@ -118,6 +122,7 @@ function market(item) {
   if (item == "pickaxe") { document.getElementById("diff").innerText = "x 2 gold per click" }
   drawGold()
   displayPurchase()
+  localSave()
 }
 
 
@@ -125,9 +130,7 @@ function displayPurchase() {
   let hider = "d-none"
   for (let i = 0; i < shopKey.length; i++) {
     let good = shopKey[i]
-    let upgradeName = shop[good].name
     let upgradeCost = shop[good].cost
-    let upgradeCount = shop[good].count
     if (upgradeCost <= gold) {
       document.getElementById(good + "butt").classList.remove("d-none")
     } else {
@@ -138,11 +141,92 @@ function displayPurchase() {
 }
 
 
+function localSave() {
+  localStorage.setItem("goldCount", JSON.stringify(gold))
+  localStorage.setItem("shopItems", JSON.stringify(shop))
+  localStorage.setItem("saveAuto", JSON.stringify(auto))
+  localStorage.setItem("saveMultiplyer", JSON.stringify(multiplyer))
+}
+
+function loadSavedShop() {
+  let savedShop = JSON.parse(localStorage.getItem("shopItems"))
+  shop = savedShop
+}
+
+function loadSavedGold() {
+  let savedGold = JSON.parse(localStorage.getItem("goldCount"))
+  let savedAuto = JSON.parse(localStorage.getItem("saveAuto"))
+  let savedMultiplyer = JSON.parse(localStorage.getItem("saveMultiplyer"))
+  gold = savedGold
+
+  auto = savedAuto
+  multiplyer = savedMultiplyer
+}
+
 
 function goldPerSecond() {
   gold += auto
   drawGold()
 }
+
+function reset() {
+  gold = 0
+  auto = 0
+  multiplyer = 1
+  shop = {
+    pickaxe: {
+      name: "Pickaxe",
+      cost: 1000,
+      img: "pickaxe.png",
+      count: 0,
+      add: 2,
+    },
+    miner: {
+      name: "Miner",
+      cost: 50,
+      img: "miner.png",
+      count: 0,
+      add: 1,
+    },
+    pirate: {
+      name: "Pirate",
+      cost: 100,
+      img: "pirate.png",
+      count: 0,
+      add: 5,
+    },
+    entrepreneur: {
+      name: "Entrepreneur",
+      cost: 200,
+      img: "entrepreneur.png",
+      count: 0,
+      add: 10,
+    },
+    tycoon: {
+      name: "Tycoon",
+      cost: 500,
+      img: "tycoon.png",
+      count: 0,
+      add: 20,
+    },
+    ceo: {
+      name: "Ceo",
+      cost: 1000,
+      img: "ceo.png",
+      count: 0,
+      add: 50,
+    },
+    goldmine: {
+      name: "Gold Mine",
+      cost: 5000,
+      img: "goldmine.png",
+      count: 0,
+      add: 100,
+    }
+  }
+  setInterval(() => location.reload(), 1000)
+}
+
 
 setInterval(goldPerSecond, 1000)
 drawShop()
